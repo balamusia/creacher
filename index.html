@@ -74,19 +74,38 @@
 <script>
 
   const earLeftAnimate = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(-45deg)' },
+  { transform: 'rotate(0)' }
 ];
   
   const earLeftTiming = {
-  duration: 2000,
-  iterations: 1,
+  duration: 1000,
+  iterations: 2,
 }
   
   const earLeft = document.querySelector(".earleft");
   
   earLeft.addEventListener('click', () => {
   earLeft.animate(earLeftAnimate, earLeftTiming);
+});
+  
+  
+   const earRightAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const earRightTiming = {
+  duration: 1000,
+  iterations: 2,
+}
+  
+  const earRight = document.querySelector(".earright");
+  
+  earRight.addEventListener('click', () => {
+  earRight.animate(earRightAnimate, earRightTiming);
 });
   
 
