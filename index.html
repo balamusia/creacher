@@ -32,6 +32,7 @@
     position: absolute;
     top: 7%;
     left: 22%;
+    cursor: pointer;
     
   }
   
@@ -45,6 +46,7 @@
     position: absolute;
     top: 7%;
     right: 22%;
+    cursor: pointer;
     
   }
 
@@ -71,6 +73,22 @@
 
 <script>
 
+  const earLeftAnimate = [
+  { transform: 'rotate(0) scale(1)' },
+  { transform: 'rotate(360deg) scale(0)' }
+];
+  
+  const earLeftTiming = {
+  duration: 2000,
+  iterations: 1,
+}
+  
+  const earLeft = document.querySelector(".earleft");
+  
+  earLeft.addEventListener('click', () => {
+  earLeft.animate(earLeftAnimate, earLeftTiming);
+});
+  
 
 
 </script>
