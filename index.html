@@ -49,6 +49,36 @@
     cursor: pointer;
     
   }
+  
+  .eyeleft{
+    border-radius: 20% 50%;
+    background-color: yellow;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    cursor: pointer;
+    
+  }
+  
+  .eyeright{
+    border-radius: 50% 20%;
+    background-color: yellow;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    cursor: pointer;
+    
+  }
+  
+  
+  
+  
 
 </style>
 
@@ -63,6 +93,14 @@
     </div>
     
     <div class="head">
+      
+      <div class="eyeleft">
+      </div>
+      
+      <div class="eyeright">
+      </div>
+      
+      
     </div>
     
     
@@ -106,6 +144,41 @@
   
   earRight.addEventListener('click', () => {
   earRight.animate(earRightAnimate, earRightTiming);
+});
+  
+  
+  const eyeLeftAnimate = [
+  { transform: 'scale(1,1)' },
+  { transform: 'scale(1,0)' },
+  { transform: 'scale(1,1)' }
+];
+  
+  const eyeLeftTiming = {
+  duration: 500,
+  iterations: 1,
+}
+  
+  const eyeLeft = document.querySelector(".eyeleft");
+  
+  eyeLeft.addEventListener('click', () => {
+  eyeLeft.animate(eyeLeftAnimate, eyeLeftTiming);
+});
+  
+  const eyeRightAnimate = [
+  { transform: 'scale(1,1)' },
+  { transform: 'scale(1,0)' },
+  { transform: 'scale(1,1)' }
+];
+  
+  const eyeRightTiming = {
+  duration: 250,
+  iterations: 2,
+}
+  
+  const eyeRight = document.querySelector(".eyeright");
+  
+  eyeRight.addEventListener('click', () => {
+  eyeRight.animate(eyeRightAnimate, eyeRightTiming);
 });
   
 
