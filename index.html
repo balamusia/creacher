@@ -155,6 +155,71 @@
     
   }
   
+  .armRightAnchor{
+    
+    border-radius: 0%;
+    background-color: white;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    
+  }
+  
+  .armRight{
+    border-radius: 50% 40%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 10vh;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger1{
+    border-radius: 50% 10%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 0%;
+    left: 170%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger2{
+    border-radius: 50% 50%;
+    background-color: black;
+    display: flex;
+    width: 6vw;
+    height: 5vh;
+    position: absolute;
+    top: 60%;
+    left: 180%;
+    cursor: pointer;
+    
+  }
+  
+  .rightFinger3{
+    border-radius: 10% 50%;
+    background-color: black;
+    display: flex;
+    width: 5vw;
+    height: 5vh;
+    position: absolute;
+    top: 115%;
+    left: 160%;
+    cursor: pointer;
+    
+  }
+  
   
   
   
@@ -192,6 +257,18 @@
       <div class="leftFinger2">
       </div>
       <div class="leftFinger3">
+      </div>
+      
+    </div>
+    
+    <div class="armRightAnchor">
+      <div class="armRight">
+      </div>
+      <div class="rightFinger1">
+      </div>
+      <div class="rightFinger2">
+      </div>
+      <div class="rightFinger3">
       </div>
       
     </div>
@@ -330,6 +407,65 @@
     leftFinger1.animate(leftFinger1Animate, leftFinger1Timing);
     leftFinger2.animate(leftFinger2Animate, leftFinger2Timing);
     leftFinger3.animate(leftFinger3Animate, leftFinger3Timing);
+});
+  
+  const armRightAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(-45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const armRightTiming = {
+  duration: 500,
+  iterations: 1,
+}
+  
+  const armRight = document.querySelector(".armRightAnchor");
+  
+  const rightFinger1Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, 40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger1Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger1 = document.querySelector(".rightFinger1")
+  
+  const rightFinger2Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, 0%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger2Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger2 = document.querySelector(".rightFinger2")
+  
+  const rightFinger3Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(-40%, -40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const rightFinger3Timing = {
+  duration: 500,
+  iterations: 2,
+}
+  
+  const rightFinger3 = document.querySelector(".rightFinger3")
+  
+  armRight.addEventListener('click', () => {
+  armRight.animate(armRightAnimate, armRightTiming);
+    rightFinger1.animate(rightFinger1Animate, rightFinger1Timing);
+    rightFinger2.animate(rightFinger2Animate, rightFinger2Timing);
+    rightFinger3.animate(rightFinger3Animate, rightFinger3Timing);
 });
   
 
