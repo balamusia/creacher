@@ -90,6 +90,32 @@
     
   }
   
+  .armLeftAnchor{
+    
+    border-radius: 0%;
+    background-color: white;
+    display: flex;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    
+  }
+  
+  .armLeft{
+    border-radius: 50% 5%;
+    background-color: black;
+    display: flex;
+    width: 15vw;
+    height: 15vh;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    cursor: pointer;
+    
+  }
+  
   
   
   
@@ -117,6 +143,12 @@
     </div>
     
     <div class="body">
+    </div>
+    
+    <div class="armLeftAnchor">
+      <div class="armLeft">
+      </div>
+      
     </div>
     
     
@@ -194,6 +226,23 @@
   
   eyeRight.addEventListener('click', () => {
   eyeRight.animate(eyeRightAnimate, eyeRightTiming);
+});
+  
+  const armLeftAnimate = [
+  { transform: 'rotate(0)' },
+  { transform: 'rotate(45deg)' },
+  { transform: 'rotate(0)' }
+];
+  
+  const armLeftTiming = {
+  duration: 1000,
+  iterations: 2,
+}
+  
+  const armLeft = document.querySelector(".armLeftAnchor");
+  
+  armLeft.addEventListener('click', () => {
+  armLeft.animate(armLeftAnimate, armLeftTiming);
 });
   
 
