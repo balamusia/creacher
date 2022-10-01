@@ -286,8 +286,50 @@
   
   const armLeft = document.querySelector(".armLeftAnchor");
   
+  const leftFinger1Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, 40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger1Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger1 = document.querySelector(".leftFinger1")
+  
+  const leftFinger2Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, 0%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger2Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger2 = document.querySelector(".leftFinger2")
+  
+  const leftFinger3Animate = [
+  { transform: 'translate(0)' },
+  { transform: 'translate(40%, -40%)' },
+  { transform: 'translate(0)' }
+];
+  
+  const leftFinger3Timing = {
+  duration: 500,
+  iterations: 3,
+}
+  
+  const leftFinger3 = document.querySelector(".leftFinger3")
+  
   armLeft.addEventListener('click', () => {
   armLeft.animate(armLeftAnimate, armLeftTiming);
+    leftFinger1.animate(leftFinger1Animate, leftFinger1Timing);
+    leftFinger2.animate(leftFinger2Animate, leftFinger2Timing);
+    leftFinger3.animate(leftFinger3Animate, leftFinger3Timing);
 });
   
 
