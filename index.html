@@ -474,7 +474,7 @@
   
   const armRightAnimate = [
   { transform: 'rotate(0)' },
-  { transform: 'rotate(-45deg)' },
+  { transform: 'rotate(45deg)' },
   { transform: 'rotate(0)' }
 ];
   
@@ -546,6 +546,23 @@
   
   legLeft.addEventListener('click', () => {
   legLeft.animate(legLeftAnimate, legLeftTiming);
+});
+  
+  const legRightAnimate = [
+  { transform: 'translate(0%)' },
+  { transform: 'translate(30%)' },
+  { transform: 'translate(0%)' }
+];
+  
+  const legRightTiming = {
+  duration: 400,
+  iterations: 2,
+}
+  
+  const legRight = document.querySelector(".legRightAnchor");
+  
+  legRight.addEventListener('click', () => {
+  legRight.animate(legRightAnimate, legRightTiming);
 });
   
 
